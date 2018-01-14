@@ -1,0 +1,23 @@
+#main-title
+{ 
+align:center;
+font-family:anton;
+
+}
+table
+{
+    opacity:.80;
+    width:50%;
+   
+}
+#message
+{
+    align:center;
+    font-family:Arial;
+    font-size:20px;
+    
+}
+body
+{
+    background:GoldenRod;
+}

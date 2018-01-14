@@ -1,0 +1,19 @@
+<?php
+session_start();
+$nick=htmlspecialchars($_POST['nick']);
+$text=htmlspecialchars($_POST['text']);
+$dateTime = date('d/m/y G:i:s');
+
+$data = "<tr>
+<td>   $dateTime  </td>
+<td>   $nick   </td>
+<td>   $text   </td>
+</tr>";
+
+$fh = fopen('board.html', 'a');
+fwrite($fh, $data);
+fclose($fh);
+
+<script type="text/javascript">
+window.location = "board.html"
+</script>'; p>
