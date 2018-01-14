@@ -85,7 +85,10 @@ def readPost(row, username):
             keyIndex = i-1
             break
     encKey = postSheet.cell(row, keyIndex).value.encode('utf-8')
+    print(encKey)
     key = cryptSystem.decrypt(encKey, myKey)
-    encText = postSheet.cell(row, 3).value.encode('utf-8')
+    print(key)
+    encText = binascii.hexlify(postSheet.cell(row, 3).value.encode('utf-8'))
+    print(encText)
     return binascii.hexlify(cryptSystem.decrypt(encText, key)).decode('utf-8', 'ignore')
     
