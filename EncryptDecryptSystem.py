@@ -36,4 +36,4 @@ def shaHash(text, salt):
     return binascii.hexlify(hashlib.pbkdf2_hmac('sha256', text, salt, 100000))
 
 def generate(length):
-    return os.urandom(length))
+    return os.urandom(length)
